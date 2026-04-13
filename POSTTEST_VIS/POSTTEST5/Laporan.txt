@@ -1,0 +1,17 @@
+Proyek ini adalah aplikasi desktop berbasis VB.NET yang terhubung dengan database MySQL untuk mengelola data jenis buku. Aplikasi ini dibuat menggunakan Windows Forms di Visual Studio dan menggunakan MySQL sebagai tempat penyimpanan data agar data tidak hilang ketika program ditutup.
+
+Tujuan utama dari aplikasi ini adalah untuk menerapkan konsep CRUD yaitu Create, Read, Update, dan Delete, serta fitur pencarian data. Dengan adanya aplikasi ini, pengguna dapat menambahkan data baru, melihat data yang sudah ada, mengubah data, menghapus data, dan mencari data dengan mudah melalui tampilan form.
+
+Konsep kerja program dimulai dari pengguna yang memasukkan data ke dalam form. Data yang diinput berupa kode jenis dan nama jenis buku. Setelah pengguna menekan tombol simpan, program akan melakukan validasi terlebih dahulu untuk memastikan bahwa input tidak kosong dan data yang dimasukkan sudah sesuai.
+
+Jika validasi berhasil, program akan membuka koneksi ke database menggunakan fungsi yang ada di ConnectionModule. Koneksi ini menggunakan MySQL Connector yang sudah diinstall melalui NuGet Package di Visual Studio. Setelah koneksi terbuka, program akan menjalankan perintah SQL yang terdapat di DataModule.
+
+Pada saat menyimpan data, program menggunakan perintah INSERT untuk menambahkan data ke dalam tabel tbjenis. Pada saat menampilkan data, program menggunakan perintah SELECT untuk mengambil semua data dari tabel dan menampilkannya ke DataGridView di form. Pada saat mengubah data, program menggunakan perintah UPDATE untuk memperbarui data berdasarkan kode jenis. Pada saat menghapus data, program menggunakan perintah DELETE untuk menghapus data dari tabel. Sedangkan untuk pencarian data, program menggunakan perintah SELECT dengan kondisi LIKE agar data dapat dicari berdasarkan kata kunci yang dimasukkan pengguna.
+
+Struktur program dibagi menjadi beberapa bagian agar lebih terorganisir. ConnectionModule berfungsi untuk mengatur koneksi ke database. DataModule berisi semua perintah SQL seperti menambah, menampilkan, mengubah, menghapus, dan mencari data. Form1 berfungsi sebagai tampilan utama yang digunakan oleh pengguna untuk berinteraksi dengan aplikasi. Di dalam Form1 terdapat berbagai komponen seperti TextBox untuk input data, Button untuk menjalankan aksi, dan DataGridView untuk menampilkan data.
+
+Ketika program dijalankan, form akan otomatis menampilkan seluruh data yang ada di database. Pengguna dapat langsung menambahkan data baru, memilih data dari tabel untuk diubah atau dihapus, serta melakukan pencarian menggunakan kolom pencarian yang tersedia. Setiap aksi yang dilakukan pengguna akan langsung diproses dan hasilnya ditampilkan kembali di DataGridView.
+
+Keunggulan dari aplikasi ini adalah data yang disimpan bersifat permanen karena menggunakan database. Selain itu, aplikasi ini sudah menerapkan validasi input sehingga dapat meminimalisir kesalahan pengguna. Penggunaan modul juga membuat kode program lebih rapi dan mudah dikembangkan di masa depan.
+
+Secara keseluruhan, proyek ini merupakan implementasi dasar dari pemrograman visual berbasis database yang menggabungkan antarmuka pengguna dengan pengolahan data menggunakan SQL. Proyek ini juga menjadi dasar untuk pengembangan aplikasi yang lebih kompleks di tahap selanjutnya.
